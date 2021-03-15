@@ -16,7 +16,7 @@ class CubicExampleTests: XCTestCase {
     let fileName = "test.wav"
     
     func testExample() throws {
-        client = Client(host: "demo-cubic.cobaltspeech.com", port: 2727, useTLS: true)
+        client = Client(host: "demo.cobaltspeech.com", port: 2727, useTLS: true)
         let expectation = XCTestExpectation(description: "List models")
         client.listModels(success: { (models) in
             XCTAssertNotNil(models)

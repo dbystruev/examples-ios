@@ -32,7 +32,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, AudioRecord
     
     fileprivate let RECORDSESSION_RESULTS_DELIMITER = "\n"
    
-    fileprivate var configuration = Configuration(host: "demo-cubic.cobaltspeech.com", port: 2727)
+    fileprivate var configuration = Configuration(host: "demo.cobaltspeech.com", port: 2727)
     
     @IBOutlet weak var resultTextView: TextView!
     @IBOutlet weak var recordButton: UIButton!

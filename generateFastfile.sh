@@ -4,11 +4,6 @@ cat > fastlane/Fastfile << EOL
 default_platform(:ios)
 
 platform :ios do
-  before_all do
-    ENV["FASTLANE_USER"] = "${APPLE_ID}"
-    ENV["FASTLANE_PASSWORD"] = "${USER_PASSWORD}"
-  end
-
   desc "Push a new beta build to TestFlight if there is a new version number of build number"
 
   lane :update_code_signing do
@@ -19,6 +14,12 @@ platform :ios do
   end
 
   lane :beta do
+    api_key = app_store_connect_api_key(
+      key_id: "${APPSTORE_CONNECT_API_KEY_ID}",
+      issuer_id: "${APPSTORE_CONNECT_API_ISSUER_ID}",
+      key_filepath: "${APPSTORE_CONNECT_API_KEY_FILEPATH}"
+    )
+
     update_code_signing_settings(
         use_automatic_signing: true,
         team_id: "${TEAM_ID}"
@@ -31,7 +32,7 @@ platform :ios do
 
     build = get_build_number(xcodeproj: "CubicExample.xcodeproj")
 
-    latest_testflight_build_number
+    latest_testflight_build_number(api_key: api_key)
     testflight_version = lane_context[SharedValues::LATEST_TESTFLIGHT_VERSION]
     testflight_build_number = lane_context[SharedValues::LATEST_TESTFLIGHT_BUILD_NUMBER]
 
@@ -42,7 +43,7 @@ platform :ios do
       build_app(
         scheme: "CubicExample"
       )
-      upload_to_testflight
+      upload_to_testflight(api_key: api_key)
     end
   end
 end

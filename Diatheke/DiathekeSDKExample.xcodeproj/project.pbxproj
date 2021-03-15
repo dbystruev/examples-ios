@@ -1,0 +1,511 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8F2BEFAE2542D334000EBF11 /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2BEFAD2542D334000EBF11 /* Recorder.swift */; };
+		8F349AF82456E12700AF1BCE /* ARFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F349AF72456E12700AF1BCE /* ARFileManager.swift */; };
+		8FB40652244D97E500AE4C73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB40651244D97E500AE4C73 /* AppDelegate.swift */; };
+		8FB40654244D97E500AE4C73 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB40653244D97E500AE4C73 /* SceneDelegate.swift */; };
+		8FB40656244D97E500AE4C73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB40655244D97E500AE4C73 /* ViewController.swift */; };
+		8FB40659244D97E500AE4C73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FB40657244D97E500AE4C73 /* Main.storyboard */; };
+		8FB4065B244D97E700AE4C73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FB4065A244D97E700AE4C73 /* Assets.xcassets */; };
+		8FB4065E244D97E700AE4C73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FB4065C244D97E700AE4C73 /* LaunchScreen.storyboard */; };
+		8FB40669244D97E700AE4C73 /* DiathekeSDKExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB40668244D97E700AE4C73 /* DiathekeSDKExampleTests.swift */; };
+		8FF9D6F725FBC2E0002C13DB /* Diatheke in Frameworks */ = {isa = PBXBuildFile; productRef = 8FF9D6F625FBC2E0002C13DB /* Diatheke */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8FB40665244D97E700AE4C73 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8FB40646244D97E500AE4C73 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8FB4064D244D97E500AE4C73;
+			remoteInfo = DiathekeSDKExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8F2BEFAD2542D334000EBF11 /* Recorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
+		8F349AF72456E12700AF1BCE /* ARFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARFileManager.swift; sourceTree = "<group>"; };
+		8FB4064E244D97E500AE4C73 /* DiathekeSDKExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiathekeSDKExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FB40651244D97E500AE4C73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8FB40653244D97E500AE4C73 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8FB40655244D97E500AE4C73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8FB40658244D97E500AE4C73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8FB4065A244D97E700AE4C73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8FB4065D244D97E700AE4C73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8FB4065F244D97E700AE4C73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FB40664244D97E700AE4C73 /* DiathekeSDKExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiathekeSDKExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FB40668244D97E700AE4C73 /* DiathekeSDKExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiathekeSDKExampleTests.swift; sourceTree = "<group>"; };
+		8FB4066A244D97E700AE4C73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8FB4064B244D97E500AE4C73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FF9D6F725FBC2E0002C13DB /* Diatheke in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FB40661244D97E700AE4C73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8FB40645244D97E500AE4C73 = {
+			isa = PBXGroup;
+			children = (
+				8FB40650244D97E500AE4C73 /* DiathekeSDKExample */,
+				8FB40667244D97E700AE4C73 /* DiathekeSDKExampleTests */,
+				8FB4064F244D97E500AE4C73 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8FB4064F244D97E500AE4C73 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8FB4064E244D97E500AE4C73 /* DiathekeSDKExample.app */,
+				8FB40664244D97E700AE4C73 /* DiathekeSDKExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8FB40650244D97E500AE4C73 /* DiathekeSDKExample */ = {
+			isa = PBXGroup;
+			children = (
+				8FB40651244D97E500AE4C73 /* AppDelegate.swift */,
+				8FB40653244D97E500AE4C73 /* SceneDelegate.swift */,
+				8FB40655244D97E500AE4C73 /* ViewController.swift */,
+				8FB40657244D97E500AE4C73 /* Main.storyboard */,
+				8FB4065A244D97E700AE4C73 /* Assets.xcassets */,
+				8FB4065C244D97E700AE4C73 /* LaunchScreen.storyboard */,
+				8FB4065F244D97E700AE4C73 /* Info.plist */,
+				8F349AF72456E12700AF1BCE /* ARFileManager.swift */,
+				8F2BEFAD2542D334000EBF11 /* Recorder.swift */,
+			);
+			path = DiathekeSDKExample;
+			sourceTree = "<group>";
+		};
+		8FB40667244D97E700AE4C73 /* DiathekeSDKExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				8FB40668244D97E700AE4C73 /* DiathekeSDKExampleTests.swift */,
+				8FB4066A244D97E700AE4C73 /* Info.plist */,
+			);
+			path = DiathekeSDKExampleTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8FB4064D244D97E500AE4C73 /* DiathekeSDKExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FB4066D244D97E700AE4C73 /* Build configuration list for PBXNativeTarget "DiathekeSDKExample" */;
+			buildPhases = (
+				8FB4064A244D97E500AE4C73 /* Sources */,
+				8FB4064B244D97E500AE4C73 /* Frameworks */,
+				8FB4064C244D97E500AE4C73 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DiathekeSDKExample;
+			packageProductDependencies = (
+				8FF9D6F625FBC2E0002C13DB /* Diatheke */,
+			);
+			productName = DiathekeSDKExample;
+			productReference = 8FB4064E244D97E500AE4C73 /* DiathekeSDKExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8FB40663244D97E700AE4C73 /* DiathekeSDKExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FB40670244D97E700AE4C73 /* Build configuration list for PBXNativeTarget "DiathekeSDKExampleTests" */;
+			buildPhases = (
+				8FB40660244D97E700AE4C73 /* Sources */,
+				8FB40661244D97E700AE4C73 /* Frameworks */,
+				8FB40662244D97E700AE4C73 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8FB40666244D97E700AE4C73 /* PBXTargetDependency */,
+			);
+			name = DiathekeSDKExampleTests;
+			productName = DiathekeSDKExampleTests;
+			productReference = 8FB40664244D97E700AE4C73 /* DiathekeSDKExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8FB40646244D97E500AE4C73 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1210;
+				ORGANIZATIONNAME = "Cobalt Speech and Language Inc";
+				TargetAttributes = {
+					8FB4064D244D97E500AE4C73 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					8FB40663244D97E700AE4C73 = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 8FB4064D244D97E500AE4C73;
+					};
+				};
+			};
+			buildConfigurationList = 8FB40649244D97E500AE4C73 /* Build configuration list for PBXProject "DiathekeSDKExample" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8FB40645244D97E500AE4C73;
+			packageReferences = (
+				8FF9D6F525FBC2E0002C13DB /* XCRemoteSwiftPackageReference "sdk-diatheke" */,
+			);
+			productRefGroup = 8FB4064F244D97E500AE4C73 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8FB4064D244D97E500AE4C73 /* DiathekeSDKExample */,
+				8FB40663244D97E700AE4C73 /* DiathekeSDKExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8FB4064C244D97E500AE4C73 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FB4065E244D97E700AE4C73 /* LaunchScreen.storyboard in Resources */,
+				8FB4065B244D97E700AE4C73 /* Assets.xcassets in Resources */,
+				8FB40659244D97E500AE4C73 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FB40662244D97E700AE4C73 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8FB4064A244D97E500AE4C73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FB40656244D97E500AE4C73 /* ViewController.swift in Sources */,
+				8FB40652244D97E500AE4C73 /* AppDelegate.swift in Sources */,
+				8F349AF82456E12700AF1BCE /* ARFileManager.swift in Sources */,
+				8F2BEFAE2542D334000EBF11 /* Recorder.swift in Sources */,
+				8FB40654244D97E500AE4C73 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FB40660244D97E700AE4C73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FB40669244D97E700AE4C73 /* DiathekeSDKExampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8FB40666244D97E700AE4C73 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8FB4064D244D97E500AE4C73 /* DiathekeSDKExample */;
+			targetProxy = 8FB40665244D97E700AE4C73 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8FB40657244D97E500AE4C73 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8FB40658244D97E500AE4C73 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8FB4065C244D97E700AE4C73 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8FB4065D244D97E700AE4C73 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8FB4066B244D97E700AE4C73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8FB4066C244D97E700AE4C73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8FB4066E244D97E700AE4C73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = DiathekeSDKExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cobaltspeech.DiathekeSDKExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8FB4066F244D97E700AE4C73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = DiathekeSDKExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cobaltspeech.DiathekeSDKExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8FB40671244D97E700AE4C73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2527Z97PF4;
+				INFOPLIST_FILE = DiathekeSDKExampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cobaltspeech.DiathekeSDKExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DiathekeSDKExample.app/DiathekeSDKExample";
+			};
+			name = Debug;
+		};
+		8FB40672244D97E700AE4C73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2527Z97PF4;
+				INFOPLIST_FILE = DiathekeSDKExampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cobaltspeech.DiathekeSDKExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DiathekeSDKExample.app/DiathekeSDKExample";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8FB40649244D97E500AE4C73 /* Build configuration list for PBXProject "DiathekeSDKExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FB4066B244D97E700AE4C73 /* Debug */,
+				8FB4066C244D97E700AE4C73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8FB4066D244D97E700AE4C73 /* Build configuration list for PBXNativeTarget "DiathekeSDKExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FB4066E244D97E700AE4C73 /* Debug */,
+				8FB4066F244D97E700AE4C73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8FB40670244D97E700AE4C73 /* Build configuration list for PBXNativeTarget "DiathekeSDKExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FB40671244D97E700AE4C73 /* Debug */,
+				8FB40672244D97E700AE4C73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8FF9D6F525FBC2E0002C13DB /* XCRemoteSwiftPackageReference "sdk-diatheke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:cobaltspeech/sdk-diatheke.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8FF9D6F625FBC2E0002C13DB /* Diatheke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8FF9D6F525FBC2E0002C13DB /* XCRemoteSwiftPackageReference "sdk-diatheke" */;
+			productName = Diatheke;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 8FB40646244D97E500AE4C73 /* Project object */;
+}
