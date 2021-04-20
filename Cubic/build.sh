@@ -56,3 +56,7 @@ apple_id("${APPLE_ID}") # Your Apple email address
 itc_team_id("${ITC_TEAM_ID}") # App Store Connect Team ID
 team_id("${TEAM_ID}") # Developer Portal Team ID
 EOL
+
+fastlane update_code_signing
+xcodebuild test -project CubicExample.xcodeproj -scheme CubicExample -destination 'platform=iOS Simulator,name=iPhone 11'
+fastlane beta

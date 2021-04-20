@@ -5,15 +5,26 @@ def build() {
 	try {
 		checkout scm
 
-		commit.setBuildStatus("build", "PENDING", "Building...")
-		sh "sh generateFastfile.sh"
 		sh "security -i unlock-keychain -p ${USER_PASSWORD} ~/Library/Keychains/login.keychain-db"
-		sh "fastlane update_code_signing"
-		sh "xcodebuild test -project CubicExample.xcodeproj -scheme CubicExample -destination 'platform=iOS Simulator,name=iPhone 11'"
-                sh "fastlane beta"
-		commit.setBuildStatus("build", "SUCCESS", "Build succeeded")
+
+		try {
+			commit.setBuildStatus("build-cubic", "PENDING", "Building...")
+			sh "cd Cubic && chmod +x build.sh && ./build.sh"
+			commit.setBuildStatus("build-cubic", "SUCCESS", "Build succeeded")
+		} catch (err) {
+			commit.setBuildStatus("build-cubic", "ERROR", "Build failed")
+			throw err
+		}
+
+		try {
+			commit.setBuildStatus("build-diatheke", "PENDING", "Building...")
+			sh "cd Diatheke && chmod +x build.sh && ./build.sh"
+			commit.setBuildStatus("build-diatheke", "SUCCESS", "Build succeeded")
+		} catch (err) {
+			commit.setBuildStatus("build-diatheke", "ERROR", "Build failed")
+			throw err
+		}
 	} catch (err) {
-		commit.setBuildStatus("build", "ERROR", "Build failed")
 		throw err
 	} finally {
 		deleteDir()

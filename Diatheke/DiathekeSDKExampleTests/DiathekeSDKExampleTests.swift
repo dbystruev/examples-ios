@@ -7,9 +7,12 @@
 //
 
 import XCTest
+import Diatheke
 @testable import DiathekeSDKExample
 
 class DiathekeSDKExampleTests: XCTestCase {
+    
+    var client: Client!
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -20,8 +23,17 @@ class DiathekeSDKExampleTests: XCTestCase {
     }
 
     func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        client = Client(host: "100.78.103.101", port: 9053, useTLS: false)
+        let expectation = XCTestExpectation(description: "List models")
+        
+        client.listModels { (models) in
+            XCTAssert(models.count > 0, "models list is empty")
+            expectation.fulfill()
+        } failure: { (error) in
+            XCTFail(error.localizedDescription)
+        }
+
+        wait(for: [expectation], timeout: 100.0)
     }
 
     func testPerformanceExample() throws {
