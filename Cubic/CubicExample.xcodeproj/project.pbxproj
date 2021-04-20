@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8F3D8A6F245080BF001D76CA /* CubicExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3D8A6E245080BF001D76CA /* CubicExampleTests.swift */; };
 		8F3D8A772450924A001D76CA /* test.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8F3D8A762450924A001D76CA /* test.wav */; };
+		8F4A7727262F018C003EE8FA /* Cubic in Frameworks */ = {isa = PBXBuildFile; productRef = 8F4A7726262F018C003EE8FA /* Cubic */; };
 		8F4B3D6B2424246F00FEA2F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4B3D6A2424246F00FEA2F4 /* AppDelegate.swift */; };
 		8F4B3D6D2424246F00FEA2F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4B3D6C2424246F00FEA2F4 /* SceneDelegate.swift */; };
 		8F4B3D6F2424246F00FEA2F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4B3D6E2424246F00FEA2F4 /* ViewController.swift */; };
@@ -17,7 +18,6 @@
 		8F4B3D772424247000FEA2F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F4B3D752424247000FEA2F4 /* LaunchScreen.storyboard */; };
 		8F4B3D82242425D300FEA2F4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4B3D81242425D300FEA2F4 /* SettingsViewController.swift */; };
 		8F4B3D842424262500FEA2F4 /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4B3D832424262500FEA2F4 /* AudioRecorder.swift */; };
-		8F722699242442570087F98A /* Cubic in Frameworks */ = {isa = PBXBuildFile; productRef = 8F722698242442570087F98A /* Cubic */; };
 		8F72269C2424C0A70087F98A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8F72269B2424C0A70087F98A /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
@@ -61,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F722699242442570087F98A /* Cubic in Frameworks */,
+				8F4A7727262F018C003EE8FA /* Cubic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,7 +156,7 @@
 			);
 			name = CubicExample;
 			packageProductDependencies = (
-				8F722698242442570087F98A /* Cubic */,
+				8F4A7726262F018C003EE8FA /* Cubic */,
 			);
 			productName = CubicExample;
 			productReference = 8F4B3D672424246F00FEA2F4 /* CubicExample.app */;
@@ -169,7 +169,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1140;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = "Cobalt Speech and Language Inc.";
 				TargetAttributes = {
 					8F3D8A6B245080BF001D76CA = {
@@ -191,7 +191,7 @@
 			);
 			mainGroup = 8F4B3D5E2424246F00FEA2F4;
 			packageReferences = (
-				8F722697242442570087F98A /* XCRemoteSwiftPackageReference "sdk-cubic" */,
+				8F4A7725262F018C003EE8FA /* XCRemoteSwiftPackageReference "sdk-cubic" */,
 			);
 			productRefGroup = 8F4B3D682424246F00FEA2F4 /* Products */;
 			projectDirPath = "";
@@ -352,6 +352,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -412,6 +413,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -445,7 +447,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CubicExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
@@ -466,7 +468,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CubicExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
@@ -515,20 +517,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		8F722697242442570087F98A /* XCRemoteSwiftPackageReference "sdk-cubic" */ = {
+		8F4A7725262F018C003EE8FA /* XCRemoteSwiftPackageReference "sdk-cubic" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:cobaltspeech/sdk-cubic.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.4.0;
+				minimumVersion = 1.6.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8F722698242442570087F98A /* Cubic */ = {
+		8F4A7726262F018C003EE8FA /* Cubic */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8F722697242442570087F98A /* XCRemoteSwiftPackageReference "sdk-cubic" */;
+			package = 8F4A7725262F018C003EE8FA /* XCRemoteSwiftPackageReference "sdk-cubic" */;
 			productName = Cubic;
 		};
 /* End XCSwiftPackageProductDependency section */
