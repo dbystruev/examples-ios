@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8F2BEFAE2542D334000EBF11 /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2BEFAD2542D334000EBF11 /* Recorder.swift */; };
+		8F342032275A83D900C5219D /* Diatheke in Frameworks */ = {isa = PBXBuildFile; productRef = 8F342031275A83D900C5219D /* Diatheke */; };
 		8F349AF82456E12700AF1BCE /* ARFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F349AF72456E12700AF1BCE /* ARFileManager.swift */; };
 		8FB40652244D97E500AE4C73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB40651244D97E500AE4C73 /* AppDelegate.swift */; };
 		8FB40654244D97E500AE4C73 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB40653244D97E500AE4C73 /* SceneDelegate.swift */; };
@@ -16,7 +17,6 @@
 		8FB4065B244D97E700AE4C73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FB4065A244D97E700AE4C73 /* Assets.xcassets */; };
 		8FB4065E244D97E700AE4C73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FB4065C244D97E700AE4C73 /* LaunchScreen.storyboard */; };
 		8FB40669244D97E700AE4C73 /* DiathekeSDKExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB40668244D97E700AE4C73 /* DiathekeSDKExampleTests.swift */; };
-		8FF9D6F725FBC2E0002C13DB /* Diatheke in Frameworks */ = {isa = PBXBuildFile; productRef = 8FF9D6F625FBC2E0002C13DB /* Diatheke */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FF9D6F725FBC2E0002C13DB /* Diatheke in Frameworks */,
+				8F342032275A83D900C5219D /* Diatheke in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,7 +124,7 @@
 			);
 			name = DiathekeSDKExample;
 			packageProductDependencies = (
-				8FF9D6F625FBC2E0002C13DB /* Diatheke */,
+				8F342031275A83D900C5219D /* Diatheke */,
 			);
 			productName = DiathekeSDKExample;
 			productReference = 8FB4064E244D97E500AE4C73 /* DiathekeSDKExample.app */;
@@ -177,7 +177,7 @@
 			);
 			mainGroup = 8FB40645244D97E500AE4C73;
 			packageReferences = (
-				8FF9D6F525FBC2E0002C13DB /* XCRemoteSwiftPackageReference "sdk-diatheke" */,
+				8F342030275A83D900C5219D /* XCRemoteSwiftPackageReference "sdk-diatheke" */,
 			);
 			productRefGroup = 8FB4064F244D97E500AE4C73 /* Products */;
 			projectDirPath = "";
@@ -380,6 +380,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
@@ -400,6 +401,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
@@ -421,8 +423,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2527Z97PF4;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DiathekeSDKExampleTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -432,6 +434,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cobaltspeech.DiathekeSDKExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DiathekeSDKExample.app/DiathekeSDKExample";
@@ -443,8 +447,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2527Z97PF4;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DiathekeSDKExampleTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -454,6 +458,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cobaltspeech.DiathekeSDKExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DiathekeSDKExample.app/DiathekeSDKExample";
@@ -493,20 +499,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		8FF9D6F525FBC2E0002C13DB /* XCRemoteSwiftPackageReference "sdk-diatheke" */ = {
+		8F342030275A83D900C5219D /* XCRemoteSwiftPackageReference "sdk-diatheke" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:cobaltspeech/sdk-diatheke.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.1;
+				minimumVersion = 2.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8FF9D6F625FBC2E0002C13DB /* Diatheke */ = {
+		8F342031275A83D900C5219D /* Diatheke */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8FF9D6F525FBC2E0002C13DB /* XCRemoteSwiftPackageReference "sdk-diatheke" */;
+			package = 8F342030275A83D900C5219D /* XCRemoteSwiftPackageReference "sdk-diatheke" */;
 			productName = Diatheke;
 		};
 /* End XCSwiftPackageProductDependency section */

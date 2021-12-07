@@ -75,6 +75,7 @@ class ViewController: UIViewController {
     fileprivate var audioData: Data?                            // TTS audio data
     fileprivate var asrStream: ASRStream?
     fileprivate var ttsStream: TTSStream?
+    fileprivate var transcribeStream: TranscribeStream?
     
     fileprivate var models: [Cobaltspeech_Diatheke_ModelInfo] = []
     
@@ -105,33 +106,35 @@ class ViewController: UIViewController {
 
     fileprivate var isRecording = false {
         didSet {
-            guard isViewLoaded else { return }
-            
-            if isRecording {
-                UIView.transition(with: recordButton,
-                                  duration: 0.2,
-                                  options: .transitionFlipFromBottom,
-                                  animations: { self.recordButton.setImage(UIImage(named: "stop_record"), for: .normal) },
-                                  completion: nil)
-            
+            DispatchQueue.main.async {
+                guard self.isViewLoaded else { return }
                 
-                textField.isHidden = true
-                recordDurationLabel.isHidden = false
+                if self.isRecording {
+                    UIView.transition(with: self.recordButton,
+                                      duration: 0.2,
+                                      options: .transitionFlipFromBottom,
+                                      animations: { self.recordButton.setImage(UIImage(named: "stop_record"), for: .normal) },
+                                      completion: nil)
                 
-                
-                recordDuration = 0
-                recordDurationTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (timer) in
-                    self.recordDuration += timer.timeInterval
-                })
-            } else {
-                UIView.transition(with: recordButton,
-                                  duration: 0.2,
-                                  options: .transitionFlipFromTop,
-                                  animations: { self.recordButton.setImage(UIImage(named: "start_record"), for: .normal) },
-                                  completion: nil)
-                textField.isHidden = false
-                recordDurationLabel.isHidden = true
-                recordDurationTimer.invalidate()
+                    
+                    self.textField.isHidden = true
+                    self.recordDurationLabel.isHidden = false
+                    
+                    
+                    self.recordDuration = 0
+                    self.recordDurationTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (timer) in
+                        self.recordDuration += timer.timeInterval
+                    })
+                } else {
+                    UIView.transition(with: self.recordButton,
+                                      duration: 0.2,
+                                      options: .transitionFlipFromTop,
+                                      animations: { self.recordButton.setImage(UIImage(named: "start_record"), for: .normal) },
+                                      completion: nil)
+                    self.textField.isHidden = false
+                    self.recordDurationLabel.isHidden = true
+                    self.recordDurationTimer.invalidate()
+                }
             }
         }
     }
@@ -160,6 +163,13 @@ class ViewController: UIViewController {
         connect()
         
         recorder.sendAudioChunkBlock = { data in
+            self.transcribeStream?.sendAudio(data, completion: { error in
+                if let error = error {
+                    print(error)
+                }
+            })
+            
+            
             self.asrStream?.sendAudio(data: data, completion: { (error) in
                 if let error = error {
                     print(error)
@@ -216,6 +226,17 @@ class ViewController: UIViewController {
 
         guard let host = host, let port = port else { return }
         client = Client(host: host, port: port, useTLS: useTLS)
+        
+        client.version { response in
+            print("Chosun \(response.chosun)")
+            print("Cubic \(response.cubic)")
+            print("Diatheke \(response.diatheke)")
+            print("Luna \(response.luna)")
+        } failure: { error in
+            self.processError(error)
+        }
+
+        
         client.listModels { (modelInfo) in
             self.saveConnectionSettings()
             self.models = modelInfo
@@ -240,7 +261,7 @@ class ViewController: UIViewController {
         }
         
         dispatchGroup.notify(queue: DispatchQueue.main) {
-            self.client.createSession(modelID: model.id) { (sessionOutput) in
+            self.client.createSession(modelID: model.id, wakeword: "Cubic") { (sessionOutput) in
                 self.processActions(sessionOutput: sessionOutput)
             } failure: { (error) in
                 self.processError(error)
@@ -308,6 +329,12 @@ class ViewController: UIViewController {
                         self.playAudio(data: audioData)
                     }
                 })
+            case .transcribe(let transcribeAction):
+                let message = Message(text: transcribeAction.cubicModelID, type: .reply)
+                self.messages.append(message)
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
             }
         }
     }
@@ -412,6 +439,12 @@ class ViewController: UIViewController {
     @IBAction func recordButtonTapped(_ sender: Any) {
         if isRecording {
             recorder.stopRecording()
+            self.transcribeStream?.finish(completion: { error in
+                if let error = error {
+                    print(error)
+                }
+            })
+            
             self.asrStream?.result(completion: { (error) in
                 if let error = error {
                     print(error)
@@ -431,6 +464,23 @@ class ViewController: UIViewController {
     
     fileprivate func startNewRecording() {
         guard let tokenData = tokenData else { return }
+        
+        var action = Cobaltspeech_Diatheke_TranscribeAction()
+        action.cubicModelID = "1"
+        action.diathekeModelID = model?.id ?? ""
+    
+        self.transcribeStream = client.newTranscribeStream(action: action, transcribeResultHandler: { transcribeResult in
+            let message = Message(text: transcribeResult.text, type: .user)
+            self.messages.append(message)
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }, completion: { error in
+            if let error = error {
+                print(error)
+            }
+        })
+
         self.asrStream = client.newSessionASRStream(token: tokenData, asrResultHandler: { (result) in
             switch result {
             case .success(let asrResult):
@@ -443,6 +493,7 @@ class ViewController: UIViewController {
                 }
                 
                 self.client.processASRResult(token: self.tokenData!, asrResult: asrResult) { (sessionOutput) in
+                    
                     self.processActions(sessionOutput: sessionOutput)
                 } failure: { (error) in
                     self.processError(error)

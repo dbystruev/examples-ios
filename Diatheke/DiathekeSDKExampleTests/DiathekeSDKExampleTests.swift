@@ -23,7 +23,7 @@ class DiathekeSDKExampleTests: XCTestCase {
     }
 
     func testExample() throws {
-        client = Client(host: "100.78.103.101", port: 9053, useTLS: false)
+        client = Client(host: "demo.cobaltspeech.com", port: 2727, useTLS: false)
         let expectation = XCTestExpectation(description: "List models")
         
         client.listModels { (models) in
