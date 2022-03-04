@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DmE-Ge-tRZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DmE-Ge-tRZ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -78,13 +78,13 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </view>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="Hpw-76-43O">
-                                    <rect key="frame" x="0.0" y="228.5" width="414" height="44"/>
+                                    <rect key="frame" x="0.0" y="272" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserMessageCell" id="WxY-dd-Chh">
-                                        <rect key="frame" x="0.0" y="38" width="414" height="32.5"/>
+                                        <rect key="frame" x="0.0" y="54.5" width="414" height="32.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WxY-dd-Chh" id="cA2-SZ-DX7">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="32.5"/>
@@ -121,7 +121,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommandResultCell" id="Zqc-bf-0kN">
-                                        <rect key="frame" x="0.0" y="70.5" width="414" height="32.5"/>
+                                        <rect key="frame" x="0.0" y="87" width="414" height="32.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zqc-bf-0kN" id="btK-vw-xvX">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="32.5"/>
@@ -158,7 +158,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ServerMessageCell" id="y3f-dd-04t">
-                                        <rect key="frame" x="0.0" y="103" width="414" height="32.5"/>
+                                        <rect key="frame" x="0.0" y="119.5" width="414" height="32.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y3f-dd-04t" id="zeB-i0-JJb">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="32.5"/>
@@ -195,7 +195,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommandCell" id="fIH-SR-puw">
-                                        <rect key="frame" x="0.0" y="135.5" width="414" height="32.5"/>
+                                        <rect key="frame" x="0.0" y="152" width="414" height="32.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fIH-SR-puw" id="b6M-at-NC0">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="32.5"/>
@@ -232,7 +232,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ErrorCell" id="30A-w4-Wh0">
-                                        <rect key="frame" x="0.0" y="168" width="414" height="32.5"/>
+                                        <rect key="frame" x="0.0" y="184.5" width="414" height="32.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="30A-w4-Wh0" id="fBR-Be-KbU">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="32.5"/>
@@ -265,6 +265,43 @@
                                                 <constraint firstItem="0mQ-9e-9Gy" firstAttribute="centerX" secondItem="fBR-Be-KbU" secondAttribute="centerX" id="ANG-ik-FTc"/>
                                                 <constraint firstAttribute="bottom" secondItem="0mQ-9e-9Gy" secondAttribute="bottom" constant="2" id="mYE-KK-9Ar"/>
                                                 <constraint firstItem="0mQ-9e-9Gy" firstAttribute="top" secondItem="fBR-Be-KbU" secondAttribute="top" constant="2" id="rMd-CO-ovY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TranscribeCell" id="3IV-D5-NQK">
+                                        <rect key="frame" x="0.0" y="217" width="414" height="32.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3IV-D5-NQK" id="a1I-7e-UXK">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="32.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view tag="101" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ufo-Hf-QUV">
+                                                    <rect key="frame" x="178.5" y="2" width="57.5" height="28.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jtj-D6-hnS">
+                                                            <rect key="frame" x="8" y="4" width="41.5" height="20.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="WIN-yV-oDx"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.82932991310000004" green="0.84593230600000002" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="Jtj-D6-hnS" firstAttribute="leading" secondItem="ufo-Hf-QUV" secondAttribute="leading" constant="8" id="4TM-6o-hIP"/>
+                                                        <constraint firstItem="Jtj-D6-hnS" firstAttribute="centerY" secondItem="ufo-Hf-QUV" secondAttribute="centerY" id="EB3-9O-Hzp"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Jtj-D6-hnS" secondAttribute="trailing" constant="8" id="ZL3-WD-EBb"/>
+                                                        <constraint firstItem="Jtj-D6-hnS" firstAttribute="top" secondItem="ufo-Hf-QUV" secondAttribute="top" constant="4" id="bzz-fh-VmY"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Jtj-D6-hnS" secondAttribute="bottom" constant="4" id="dDV-W7-Ocr"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ufo-Hf-QUV" firstAttribute="centerX" secondItem="a1I-7e-UXK" secondAttribute="centerX" id="TIy-XA-VqI"/>
+                                                <constraint firstAttribute="bottom" secondItem="ufo-Hf-QUV" secondAttribute="bottom" constant="2" id="nxw-Mm-PEM"/>
+                                                <constraint firstItem="ufo-Hf-QUV" firstAttribute="top" secondItem="a1I-7e-UXK" secondAttribute="top" constant="2" id="vgt-5q-J2b"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>

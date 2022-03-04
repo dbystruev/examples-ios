@@ -16,6 +16,10 @@ def build() {
 			throw err
 		}
 
+		/*
+		// This build step performs test connection to a demo Diatheke server v2.
+		// Since the current demo at demo.cobaltspeech.com runs on Diatheke v1 the test fail.
+		// This build step is ready to uncomment once we have any working demo server.
 		try {
 			commit.setBuildStatus("build-diatheke", "PENDING", "Building...")
 			sh "cd Diatheke && chmod +x build.sh && ./build.sh"
@@ -24,6 +28,7 @@ def build() {
 			commit.setBuildStatus("build-diatheke", "ERROR", "Build failed")
 			throw err
 		}
+		*/
 	} catch (err) {
 		throw err
 	} finally {

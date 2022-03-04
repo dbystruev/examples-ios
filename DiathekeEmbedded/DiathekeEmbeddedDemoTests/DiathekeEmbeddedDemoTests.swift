@@ -1,6 +1,6 @@
 //
-//  DiathekeSDKExampleTests.swift
-//  DiathekeSDKExampleTests
+//  DiathekeSDKDemoTests.swift
+//  DiathekeSDKDemoTests
 //
 //  Created by Eduard Miniakhmetov on 20.04.2020.
 //  Copyright © 2020 Cobalt Speech and Language Inc. All rights reserved.
@@ -8,7 +8,7 @@
 
 import XCTest
 import Diatheke
-@testable import DiathekeSDKExample
+@testable import DiathekeEmbeddedDemo
 
 class DiathekeSDKExampleTests: XCTestCase {
     
@@ -23,7 +23,7 @@ class DiathekeSDKExampleTests: XCTestCase {
     }
 
     func testExample() throws {
-        client = Client(host: "demo.cobaltspeech.com", port: 2727, useTLS: false)
+        client = Client(host: "100.78.103.101", port: 9053, useTLS: false)
         let expectation = XCTestExpectation(description: "List models")
         
         client.listModels { (models) in

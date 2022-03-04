@@ -1,0 +1,922 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8F2BEFAE2542D334000EBF11 /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2BEFAD2542D334000EBF11 /* Recorder.swift */; };
+		8F349AF82456E12700AF1BCE /* AudioRecordingFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F349AF72456E12700AF1BCE /* AudioRecordingFileManager.swift */; };
+		8F5CF8D327623FBD00481A79 /* LocalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5CF8D227623FBD00481A79 /* LocalModel.swift */; };
+		8F5CF8D527623FF300481A79 /* ModelStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5CF8D427623FF300481A79 /* ModelStatus.swift */; };
+		8F64E091276C08F200D7ACF6 /* Cobaltmobile.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F64E090276C08F200D7ACF6 /* Cobaltmobile.xcframework */; };
+		8F64E0B7276CF88B00D7ACF6 /* Diatheke in Frameworks */ = {isa = PBXBuildFile; productRef = 8F64E0B6276CF88B00D7ACF6 /* Diatheke */; };
+		8F64E0B9276D06E500D7ACF6 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F64E0B8276D06E500D7ACF6 /* UIApplicationExtension.swift */; };
+		8F79648E275F9BE100C31652 /* ConversationMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F79648D275F9BE100C31652 /* ConversationMessage.swift */; };
+		8F958673276369DF0099CAA3 /* ModelStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F958672276369DF0099CAA3 /* ModelStorage.swift */; };
+		8F95867527636BEC0099CAA3 /* ModelDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F95867427636BEC0099CAA3 /* ModelDownloader.swift */; };
+		8F95867B27636CCE0099CAA3 /* FileManagerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F95867A27636CCE0099CAA3 /* FileManagerExtension.swift */; };
+		8F95867E27636CEC0099CAA3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F95867D27636CEC0099CAA3 /* Constants.swift */; };
+		8F9586A727637FFF0099CAA3 /* ServerProductType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9586A627637FFF0099CAA3 /* ServerProductType.swift */; };
+		8F9586A9276384E80099CAA3 /* ModelsDownloadQueueManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9586A8276384E80099CAA3 /* ModelsDownloadQueueManager.swift */; };
+		8F9586AB276393280099CAA3 /* ModelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9586AA276393280099CAA3 /* ModelsViewController.swift */; };
+		8F9586AE276393710099CAA3 /* ModelCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9586AD276393710099CAA3 /* ModelCells.swift */; };
+		8F9586B0276393CC0099CAA3 /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9586AF276393CC0099CAA3 /* CircularProgressBar.swift */; };
+		8FA6752C2768CEB50093D59A /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8FA6752B2768CEB50093D59A /* IQKeyboardManagerSwift */; };
+		8FA6752F2768CEDE0093D59A /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = 8FA6752E2768CEDE0093D59A /* Zip */; };
+		8FA6754627696F190093D59A /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA6754527696F190093D59A /* Accelerate.framework */; };
+		8FB40652244D97E500AE4C73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB40651244D97E500AE4C73 /* AppDelegate.swift */; };
+		8FB40654244D97E500AE4C73 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB40653244D97E500AE4C73 /* SceneDelegate.swift */; };
+		8FB40656244D97E500AE4C73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB40655244D97E500AE4C73 /* ViewController.swift */; };
+		8FB40659244D97E500AE4C73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FB40657244D97E500AE4C73 /* Main.storyboard */; };
+		8FB4065B244D97E700AE4C73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FB4065A244D97E700AE4C73 /* Assets.xcassets */; };
+		8FB4065E244D97E700AE4C73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FB4065C244D97E700AE4C73 /* LaunchScreen.storyboard */; };
+		8FB40669244D97E700AE4C73 /* DiathekeEmbeddedDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB40668244D97E700AE4C73 /* DiathekeEmbeddedDemoTests.swift */; };
+		8FE3025F27C466C500C636D2 /* libgpr.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE3023E27C466C300C636D2 /* libgpr.xcframework */; };
+		8FE3026027C466C500C636D2 /* libabsl_dynamic_annotations.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE3023F27C466C300C636D2 /* libabsl_dynamic_annotations.xcframework */; };
+		8FE3026127C466C500C636D2 /* libgrpc++_unsecure.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE3024027C466C300C636D2 /* libgrpc++_unsecure.xcframework */; };
+		8FE3026227C466C500C636D2 /* libgrpc_plugin_support.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE3024127C466C300C636D2 /* libgrpc_plugin_support.xcframework */; };
+		8FE3026427C466C500C636D2 /* libgrpc_unsecure.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE3024327C466C300C636D2 /* libgrpc_unsecure.xcframework */; };
+		8FE3026527C466C500C636D2 /* libgrpc.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE3024427C466C300C636D2 /* libgrpc.xcframework */; };
+		8FE3026627C466C500C636D2 /* libabsl_time_zone.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE3024527C466C300C636D2 /* libabsl_time_zone.xcframework */; };
+		8FE3026727C466C500C636D2 /* libabsl_strings.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE3024627C466C300C636D2 /* libabsl_strings.xcframework */; };
+		8FE3026827C466C500C636D2 /* libupb.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE3024727C466C300C636D2 /* libupb.xcframework */; };
+		8FE3026927C466C500C636D2 /* libabsl_strings_internal.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE3024827C466C300C636D2 /* libabsl_strings_internal.xcframework */; };
+		8FE3026A27C466C500C636D2 /* libcares.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE3024927C466C400C636D2 /* libcares.xcframework */; };
+		8FE3026C27C466C500C636D2 /* libabsl_log_severity.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE3024B27C466C400C636D2 /* libabsl_log_severity.xcframework */; };
+		8FE3026D27C466C500C636D2 /* libssl.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE3024C27C466C400C636D2 /* libssl.xcframework */; };
+		8FE3026E27C466C500C636D2 /* libabsl_spinlock_wait.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE3024D27C466C400C636D2 /* libabsl_spinlock_wait.xcframework */; };
+		8FE3027127C466C500C636D2 /* libabsl_str_format_internal.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE3025027C466C400C636D2 /* libabsl_str_format_internal.xcframework */; };
+		8FE3027227C466C500C636D2 /* libcrypto.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE3025127C466C400C636D2 /* libcrypto.xcframework */; };
+		8FE3027327C466C500C636D2 /* libprotobuf-lite.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE3025227C466C400C636D2 /* libprotobuf-lite.xcframework */; };
+		8FE3027427C466C500C636D2 /* libabsl_time.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE3025327C466C400C636D2 /* libabsl_time.xcframework */; };
+		8FE3027527C466C500C636D2 /* libabsl_civil_time.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE3025427C466C400C636D2 /* libabsl_civil_time.xcframework */; };
+		8FE3027627C466C500C636D2 /* libgrpc++_alts.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE3025527C466C400C636D2 /* libgrpc++_alts.xcframework */; };
+		8FE3027727C466C500C636D2 /* libabsl_throw_delegate.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE3025627C466C400C636D2 /* libabsl_throw_delegate.xcframework */; };
+		8FE3027827C466C500C636D2 /* libgrpc++.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE3025727C466C400C636D2 /* libgrpc++.xcframework */; };
+		8FE3027927C466C500C636D2 /* libprotobuf.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE3025827C466C400C636D2 /* libprotobuf.xcframework */; };
+		8FE3027A27C466C500C636D2 /* libaddress_sorting.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE3025927C466C400C636D2 /* libaddress_sorting.xcframework */; };
+		8FE3027B27C466C500C636D2 /* libabsl_int128.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE3025A27C466C400C636D2 /* libabsl_int128.xcframework */; };
+		8FE3027C27C466C500C636D2 /* libabsl_bad_optional_access.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE3025B27C466C400C636D2 /* libabsl_bad_optional_access.xcframework */; };
+		8FE3027D27C466C500C636D2 /* libabsl_raw_logging_internal.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE3025C27C466C400C636D2 /* libabsl_raw_logging_internal.xcframework */; };
+		8FE3027E27C466C500C636D2 /* libabsl_base.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE3025D27C466C400C636D2 /* libabsl_base.xcframework */; };
+		8FE3027F27C466C500C636D2 /* liblunasvr.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE3025E27C466C500C636D2 /* liblunasvr.xcframework */; };
+		8FE3028027C466E000C636D2 /* libfst.13.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE3024F27C466C400C636D2 /* libfst.13.xcframework */; };
+		8FE3028127C466E000C636D2 /* libfst.13.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE3024F27C466C400C636D2 /* libfst.13.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8FE3028327C466E200C636D2 /* libfstngram.13.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE3024227C466C300C636D2 /* libfstngram.13.xcframework */; };
+		8FE3028427C466E200C636D2 /* libfstngram.13.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE3024227C466C300C636D2 /* libfstngram.13.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8FE3028527C466E400C636D2 /* libfstscript.13.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE3024E27C466C400C636D2 /* libfstscript.13.xcframework */; };
+		8FE3028627C466E400C636D2 /* libfstscript.13.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE3024E27C466C400C636D2 /* libfstscript.13.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8FE3028727C466EA00C636D2 /* libLuna.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE3024A27C466C400C636D2 /* libLuna.xcframework */; };
+		8FE3028827C466EA00C636D2 /* libLuna.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE3024A27C466C400C636D2 /* libLuna.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8FE524CA277B3CD40032A896 /* Cubic.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE524C9277B3CD40032A896 /* Cubic.xcframework */; };
+		8FE7E5BC27A9484600C66735 /* CubicsvrConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 8FE7E5BB27A9484600C66735 /* CubicsvrConfig */; };
+		8FE7E5BE27A9484600C66735 /* DiathekesvrConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 8FE7E5BD27A9484600C66735 /* DiathekesvrConfig */; };
+		8FE7E5C027A9484600C66735 /* LunasvrConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 8FE7E5BF27A9484600C66735 /* LunasvrConfig */; };
+		8FE7E60E27A9498100C66735 /* LunaWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8FE7E60C27A9498100C66735 /* LunaWrapper.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8FB40665244D97E700AE4C73 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8FB40646244D97E500AE4C73 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8FB4064D244D97E500AE4C73;
+			remoteInfo = DiathekeSDKExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8FE3028227C466E000C636D2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8FE3028427C466E200C636D2 /* libfstngram.13.xcframework in Embed Frameworks */,
+				8FE3028827C466EA00C636D2 /* libLuna.xcframework in Embed Frameworks */,
+				8FE3028127C466E000C636D2 /* libfst.13.xcframework in Embed Frameworks */,
+				8FE3028627C466E400C636D2 /* libfstscript.13.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8F2BEFAD2542D334000EBF11 /* Recorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
+		8F349AF72456E12700AF1BCE /* AudioRecordingFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecordingFileManager.swift; sourceTree = "<group>"; };
+		8F5CF8D227623FBD00481A79 /* LocalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalModel.swift; sourceTree = "<group>"; };
+		8F5CF8D427623FF300481A79 /* ModelStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelStatus.swift; sourceTree = "<group>"; };
+		8F64E090276C08F200D7ACF6 /* Cobaltmobile.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Cobaltmobile.xcframework; sourceTree = "<group>"; };
+		8F64E0B8276D06E500D7ACF6 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
+		8F79648D275F9BE100C31652 /* ConversationMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationMessage.swift; sourceTree = "<group>"; };
+		8F958672276369DF0099CAA3 /* ModelStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelStorage.swift; sourceTree = "<group>"; };
+		8F95867427636BEC0099CAA3 /* ModelDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDownloader.swift; sourceTree = "<group>"; };
+		8F95867A27636CCE0099CAA3 /* FileManagerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerExtension.swift; sourceTree = "<group>"; };
+		8F95867D27636CEC0099CAA3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8F9586A627637FFF0099CAA3 /* ServerProductType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerProductType.swift; sourceTree = "<group>"; };
+		8F9586A8276384E80099CAA3 /* ModelsDownloadQueueManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelsDownloadQueueManager.swift; sourceTree = "<group>"; };
+		8F9586AA276393280099CAA3 /* ModelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelsViewController.swift; sourceTree = "<group>"; };
+		8F9586AD276393710099CAA3 /* ModelCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelCells.swift; sourceTree = "<group>"; };
+		8F9586AF276393CC0099CAA3 /* CircularProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBar.swift; sourceTree = "<group>"; };
+		8FA6754527696F190093D59A /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		8FB4064E244D97E500AE4C73 /* DiathekeEmbeddedDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiathekeEmbeddedDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FB40651244D97E500AE4C73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8FB40653244D97E500AE4C73 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8FB40655244D97E500AE4C73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8FB40658244D97E500AE4C73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8FB4065A244D97E700AE4C73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8FB4065D244D97E700AE4C73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8FB4065F244D97E700AE4C73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FB40664244D97E700AE4C73 /* DiathekeEmbeddedDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiathekeEmbeddedDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FB40668244D97E700AE4C73 /* DiathekeEmbeddedDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiathekeEmbeddedDemoTests.swift; sourceTree = "<group>"; };
+		8FB4066A244D97E700AE4C73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FE3023E27C466C300C636D2 /* libgpr.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libgpr.xcframework; sourceTree = "<group>"; };
+		8FE3023F27C466C300C636D2 /* libabsl_dynamic_annotations.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libabsl_dynamic_annotations.xcframework; sourceTree = "<group>"; };
+		8FE3024027C466C300C636D2 /* libgrpc++_unsecure.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = "libgrpc++_unsecure.xcframework"; sourceTree = "<group>"; };
+		8FE3024127C466C300C636D2 /* libgrpc_plugin_support.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libgrpc_plugin_support.xcframework; sourceTree = "<group>"; };
+		8FE3024227C466C300C636D2 /* libfstngram.13.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libfstngram.13.xcframework; sourceTree = "<group>"; };
+		8FE3024327C466C300C636D2 /* libgrpc_unsecure.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libgrpc_unsecure.xcframework; sourceTree = "<group>"; };
+		8FE3024427C466C300C636D2 /* libgrpc.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libgrpc.xcframework; sourceTree = "<group>"; };
+		8FE3024527C466C300C636D2 /* libabsl_time_zone.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libabsl_time_zone.xcframework; sourceTree = "<group>"; };
+		8FE3024627C466C300C636D2 /* libabsl_strings.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libabsl_strings.xcframework; sourceTree = "<group>"; };
+		8FE3024727C466C300C636D2 /* libupb.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libupb.xcframework; sourceTree = "<group>"; };
+		8FE3024827C466C300C636D2 /* libabsl_strings_internal.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libabsl_strings_internal.xcframework; sourceTree = "<group>"; };
+		8FE3024927C466C400C636D2 /* libcares.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libcares.xcframework; sourceTree = "<group>"; };
+		8FE3024A27C466C400C636D2 /* libLuna.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libLuna.xcframework; sourceTree = "<group>"; };
+		8FE3024B27C466C400C636D2 /* libabsl_log_severity.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libabsl_log_severity.xcframework; sourceTree = "<group>"; };
+		8FE3024C27C466C400C636D2 /* libssl.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libssl.xcframework; sourceTree = "<group>"; };
+		8FE3024D27C466C400C636D2 /* libabsl_spinlock_wait.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libabsl_spinlock_wait.xcframework; sourceTree = "<group>"; };
+		8FE3024E27C466C400C636D2 /* libfstscript.13.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libfstscript.13.xcframework; sourceTree = "<group>"; };
+		8FE3024F27C466C400C636D2 /* libfst.13.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libfst.13.xcframework; sourceTree = "<group>"; };
+		8FE3025027C466C400C636D2 /* libabsl_str_format_internal.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libabsl_str_format_internal.xcframework; sourceTree = "<group>"; };
+		8FE3025127C466C400C636D2 /* libcrypto.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libcrypto.xcframework; sourceTree = "<group>"; };
+		8FE3025227C466C400C636D2 /* libprotobuf-lite.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = "libprotobuf-lite.xcframework"; sourceTree = "<group>"; };
+		8FE3025327C466C400C636D2 /* libabsl_time.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libabsl_time.xcframework; sourceTree = "<group>"; };
+		8FE3025427C466C400C636D2 /* libabsl_civil_time.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libabsl_civil_time.xcframework; sourceTree = "<group>"; };
+		8FE3025527C466C400C636D2 /* libgrpc++_alts.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = "libgrpc++_alts.xcframework"; sourceTree = "<group>"; };
+		8FE3025627C466C400C636D2 /* libabsl_throw_delegate.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libabsl_throw_delegate.xcframework; sourceTree = "<group>"; };
+		8FE3025727C466C400C636D2 /* libgrpc++.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = "libgrpc++.xcframework"; sourceTree = "<group>"; };
+		8FE3025827C466C400C636D2 /* libprotobuf.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libprotobuf.xcframework; sourceTree = "<group>"; };
+		8FE3025927C466C400C636D2 /* libaddress_sorting.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libaddress_sorting.xcframework; sourceTree = "<group>"; };
+		8FE3025A27C466C400C636D2 /* libabsl_int128.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libabsl_int128.xcframework; sourceTree = "<group>"; };
+		8FE3025B27C466C400C636D2 /* libabsl_bad_optional_access.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libabsl_bad_optional_access.xcframework; sourceTree = "<group>"; };
+		8FE3025C27C466C400C636D2 /* libabsl_raw_logging_internal.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libabsl_raw_logging_internal.xcframework; sourceTree = "<group>"; };
+		8FE3025D27C466C400C636D2 /* libabsl_base.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libabsl_base.xcframework; sourceTree = "<group>"; };
+		8FE3025E27C466C500C636D2 /* liblunasvr.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = liblunasvr.xcframework; sourceTree = "<group>"; };
+		8FE524C9277B3CD40032A896 /* Cubic.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Cubic.xcframework; sourceTree = "<group>"; };
+		8FE7E60B27A9498000C66735 /* DiathekeEmbeddedDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DiathekeEmbeddedDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		8FE7E60C27A9498100C66735 /* LunaWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LunaWrapper.mm; sourceTree = "<group>"; };
+		8FE7E60D27A9498100C66735 /* LunaWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LunaWrapper.h; sourceTree = "<group>"; };
+		8FE7E60F27A949FA00C66735 /* luna_version.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = luna_version.hpp; sourceTree = "<group>"; };
+		8FE7E61027A94A0200C66735 /* luna_server.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = luna_server.hpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8FB4064B244D97E500AE4C73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F64E091276C08F200D7ACF6 /* Cobaltmobile.xcframework in Frameworks */,
+				8FE3026227C466C500C636D2 /* libgrpc_plugin_support.xcframework in Frameworks */,
+				8FE3026D27C466C500C636D2 /* libssl.xcframework in Frameworks */,
+				8FE7E5BE27A9484600C66735 /* DiathekesvrConfig in Frameworks */,
+				8FE3026827C466C500C636D2 /* libupb.xcframework in Frameworks */,
+				8FE3026027C466C500C636D2 /* libabsl_dynamic_annotations.xcframework in Frameworks */,
+				8FE7E5BC27A9484600C66735 /* CubicsvrConfig in Frameworks */,
+				8FE3026427C466C500C636D2 /* libgrpc_unsecure.xcframework in Frameworks */,
+				8FE3026A27C466C500C636D2 /* libcares.xcframework in Frameworks */,
+				8FE3026C27C466C500C636D2 /* libabsl_log_severity.xcframework in Frameworks */,
+				8FE3027B27C466C500C636D2 /* libabsl_int128.xcframework in Frameworks */,
+				8FE3025F27C466C500C636D2 /* libgpr.xcframework in Frameworks */,
+				8FE3028327C466E200C636D2 /* libfstngram.13.xcframework in Frameworks */,
+				8FE3027427C466C500C636D2 /* libabsl_time.xcframework in Frameworks */,
+				8FA6754627696F190093D59A /* Accelerate.framework in Frameworks */,
+				8FA6752F2768CEDE0093D59A /* Zip in Frameworks */,
+				8FE3027E27C466C500C636D2 /* libabsl_base.xcframework in Frameworks */,
+				8FE3028527C466E400C636D2 /* libfstscript.13.xcframework in Frameworks */,
+				8FE3027827C466C500C636D2 /* libgrpc++.xcframework in Frameworks */,
+				8FA6752C2768CEB50093D59A /* IQKeyboardManagerSwift in Frameworks */,
+				8FE3027C27C466C500C636D2 /* libabsl_bad_optional_access.xcframework in Frameworks */,
+				8FE3027D27C466C500C636D2 /* libabsl_raw_logging_internal.xcframework in Frameworks */,
+				8FE3026E27C466C500C636D2 /* libabsl_spinlock_wait.xcframework in Frameworks */,
+				8FE7E5C027A9484600C66735 /* LunasvrConfig in Frameworks */,
+				8FE3027627C466C500C636D2 /* libgrpc++_alts.xcframework in Frameworks */,
+				8FE3028727C466EA00C636D2 /* libLuna.xcframework in Frameworks */,
+				8FE3027527C466C500C636D2 /* libabsl_civil_time.xcframework in Frameworks */,
+				8FE524CA277B3CD40032A896 /* Cubic.xcframework in Frameworks */,
+				8FE3027327C466C500C636D2 /* libprotobuf-lite.xcframework in Frameworks */,
+				8FE3027F27C466C500C636D2 /* liblunasvr.xcframework in Frameworks */,
+				8FE3026927C466C500C636D2 /* libabsl_strings_internal.xcframework in Frameworks */,
+				8FE3027127C466C500C636D2 /* libabsl_str_format_internal.xcframework in Frameworks */,
+				8FE3027727C466C500C636D2 /* libabsl_throw_delegate.xcframework in Frameworks */,
+				8FE3027A27C466C500C636D2 /* libaddress_sorting.xcframework in Frameworks */,
+				8F64E0B7276CF88B00D7ACF6 /* Diatheke in Frameworks */,
+				8FE3026627C466C500C636D2 /* libabsl_time_zone.xcframework in Frameworks */,
+				8FE3026727C466C500C636D2 /* libabsl_strings.xcframework in Frameworks */,
+				8FE3027927C466C500C636D2 /* libprotobuf.xcframework in Frameworks */,
+				8FE3028027C466E000C636D2 /* libfst.13.xcframework in Frameworks */,
+				8FE3027227C466C500C636D2 /* libcrypto.xcframework in Frameworks */,
+				8FE3026527C466C500C636D2 /* libgrpc.xcframework in Frameworks */,
+				8FE3026127C466C500C636D2 /* libgrpc++_unsecure.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FB40661244D97E700AE4C73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8F00A46827D1887D000A7C5A /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				8F2BEFAD2542D334000EBF11 /* Recorder.swift */,
+				8F349AF72456E12700AF1BCE /* AudioRecordingFileManager.swift */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		8F00A46927D188F4000A7C5A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8FB4065A244D97E700AE4C73 /* Assets.xcassets */,
+				8FB4065F244D97E700AE4C73 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8F00A46A27D1891B000A7C5A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8F64E0B8276D06E500D7ACF6 /* UIApplicationExtension.swift */,
+				8F95867A27636CCE0099CAA3 /* FileManagerExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8F5CF8D027623F9900481A79 /* Download */ = {
+			isa = PBXGroup;
+			children = (
+				8F5CF8D227623FBD00481A79 /* LocalModel.swift */,
+				8F5CF8D427623FF300481A79 /* ModelStatus.swift */,
+				8F958672276369DF0099CAA3 /* ModelStorage.swift */,
+				8F95867427636BEC0099CAA3 /* ModelDownloader.swift */,
+				8F9586A627637FFF0099CAA3 /* ServerProductType.swift */,
+				8F9586A8276384E80099CAA3 /* ModelsDownloadQueueManager.swift */,
+			);
+			path = Download;
+			sourceTree = "<group>";
+		};
+		8F95867927636CB50099CAA3 /* FileManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FileManager;
+			sourceTree = "<group>";
+		};
+		8F95867C27636CE30099CAA3 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				8F95867D27636CEC0099CAA3 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		8F9586AC2763935F0099CAA3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8F9586AD276393710099CAA3 /* ModelCells.swift */,
+				8F9586AF276393CC0099CAA3 /* CircularProgressBar.swift */,
+				8F9586AA276393280099CAA3 /* ModelsViewController.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8FA6753A2768F0030093D59A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8FE3023D27C466BA00C636D2 /* Luna */,
+				8FA6754527696F190093D59A /* Accelerate.framework */,
+				8FE524C9277B3CD40032A896 /* Cubic.xcframework */,
+				8F64E090276C08F200D7ACF6 /* Cobaltmobile.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8FB40645244D97E500AE4C73 = {
+			isa = PBXGroup;
+			children = (
+				8FE7E60A27A9496400C66735 /* LunaAPI */,
+				8FA6753A2768F0030093D59A /* Frameworks */,
+				8FB40650244D97E500AE4C73 /* DiathekeEmbeddedDemo */,
+				8FB40667244D97E700AE4C73 /* DiathekeEmbeddedDemoTests */,
+				8FB4064F244D97E500AE4C73 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8FB4064F244D97E500AE4C73 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8FB4064E244D97E500AE4C73 /* DiathekeEmbeddedDemo.app */,
+				8FB40664244D97E700AE4C73 /* DiathekeEmbeddedDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8FB40650244D97E500AE4C73 /* DiathekeEmbeddedDemo */ = {
+			isa = PBXGroup;
+			children = (
+				8FB40651244D97E500AE4C73 /* AppDelegate.swift */,
+				8F79648D275F9BE100C31652 /* ConversationMessage.swift */,
+				8FB40653244D97E500AE4C73 /* SceneDelegate.swift */,
+				8FB40655244D97E500AE4C73 /* ViewController.swift */,
+				8F00A46827D1887D000A7C5A /* Audio */,
+				8F95867C27636CE30099CAA3 /* Constants */,
+				8F5CF8D027623F9900481A79 /* Download */,
+				8F00A46A27D1891B000A7C5A /* Extensions */,
+				8F95867927636CB50099CAA3 /* FileManager */,
+				8FB4065C244D97E700AE4C73 /* LaunchScreen.storyboard */,
+				8FB40657244D97E500AE4C73 /* Main.storyboard */,
+				8F9586AC2763935F0099CAA3 /* Models */,
+				8F00A46927D188F4000A7C5A /* Resources */,
+			);
+			path = DiathekeEmbeddedDemo;
+			sourceTree = "<group>";
+		};
+		8FB40667244D97E700AE4C73 /* DiathekeEmbeddedDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				8FB40668244D97E700AE4C73 /* DiathekeEmbeddedDemoTests.swift */,
+				8FB4066A244D97E700AE4C73 /* Info.plist */,
+			);
+			path = DiathekeEmbeddedDemoTests;
+			sourceTree = "<group>";
+		};
+		8FE3023D27C466BA00C636D2 /* Luna */ = {
+			isa = PBXGroup;
+			children = (
+				8FE3025B27C466C400C636D2 /* libabsl_bad_optional_access.xcframework */,
+				8FE3025D27C466C400C636D2 /* libabsl_base.xcframework */,
+				8FE3025427C466C400C636D2 /* libabsl_civil_time.xcframework */,
+				8FE3023F27C466C300C636D2 /* libabsl_dynamic_annotations.xcframework */,
+				8FE3025A27C466C400C636D2 /* libabsl_int128.xcframework */,
+				8FE3024B27C466C400C636D2 /* libabsl_log_severity.xcframework */,
+				8FE3025C27C466C400C636D2 /* libabsl_raw_logging_internal.xcframework */,
+				8FE3024D27C466C400C636D2 /* libabsl_spinlock_wait.xcframework */,
+				8FE3025027C466C400C636D2 /* libabsl_str_format_internal.xcframework */,
+				8FE3024827C466C300C636D2 /* libabsl_strings_internal.xcframework */,
+				8FE3024627C466C300C636D2 /* libabsl_strings.xcframework */,
+				8FE3025627C466C400C636D2 /* libabsl_throw_delegate.xcframework */,
+				8FE3024527C466C300C636D2 /* libabsl_time_zone.xcframework */,
+				8FE3025327C466C400C636D2 /* libabsl_time.xcframework */,
+				8FE3025927C466C400C636D2 /* libaddress_sorting.xcframework */,
+				8FE3024927C466C400C636D2 /* libcares.xcframework */,
+				8FE3025127C466C400C636D2 /* libcrypto.xcframework */,
+				8FE3024F27C466C400C636D2 /* libfst.13.xcframework */,
+				8FE3024227C466C300C636D2 /* libfstngram.13.xcframework */,
+				8FE3024E27C466C400C636D2 /* libfstscript.13.xcframework */,
+				8FE3023E27C466C300C636D2 /* libgpr.xcframework */,
+				8FE3024127C466C300C636D2 /* libgrpc_plugin_support.xcframework */,
+				8FE3024327C466C300C636D2 /* libgrpc_unsecure.xcframework */,
+				8FE3024427C466C300C636D2 /* libgrpc.xcframework */,
+				8FE3025527C466C400C636D2 /* libgrpc++_alts.xcframework */,
+				8FE3024027C466C300C636D2 /* libgrpc++_unsecure.xcframework */,
+				8FE3025727C466C400C636D2 /* libgrpc++.xcframework */,
+				8FE3024A27C466C400C636D2 /* libLuna.xcframework */,
+				8FE3025E27C466C500C636D2 /* liblunasvr.xcframework */,
+				8FE3025227C466C400C636D2 /* libprotobuf-lite.xcframework */,
+				8FE3025827C466C400C636D2 /* libprotobuf.xcframework */,
+				8FE3024C27C466C400C636D2 /* libssl.xcframework */,
+				8FE3024727C466C300C636D2 /* libupb.xcframework */,
+			);
+			name = Luna;
+			sourceTree = "<group>";
+		};
+		8FE7E60A27A9496400C66735 /* LunaAPI */ = {
+			isa = PBXGroup;
+			children = (
+				8FE7E60F27A949FA00C66735 /* luna_version.hpp */,
+				8FE7E61027A94A0200C66735 /* luna_server.hpp */,
+				8FE7E60D27A9498100C66735 /* LunaWrapper.h */,
+				8FE7E60C27A9498100C66735 /* LunaWrapper.mm */,
+				8FE7E60B27A9498000C66735 /* DiathekeEmbeddedDemo-Bridging-Header.h */,
+			);
+			path = LunaAPI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8FB4064D244D97E500AE4C73 /* DiathekeEmbeddedDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FB4066D244D97E700AE4C73 /* Build configuration list for PBXNativeTarget "DiathekeEmbeddedDemo" */;
+			buildPhases = (
+				8FB4064A244D97E500AE4C73 /* Sources */,
+				8FB4064B244D97E500AE4C73 /* Frameworks */,
+				8FB4064C244D97E500AE4C73 /* Resources */,
+				8FE3028227C466E000C636D2 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DiathekeEmbeddedDemo;
+			packageProductDependencies = (
+				8FA6752B2768CEB50093D59A /* IQKeyboardManagerSwift */,
+				8FA6752E2768CEDE0093D59A /* Zip */,
+				8F64E0B6276CF88B00D7ACF6 /* Diatheke */,
+				8FE7E5BB27A9484600C66735 /* CubicsvrConfig */,
+				8FE7E5BD27A9484600C66735 /* DiathekesvrConfig */,
+				8FE7E5BF27A9484600C66735 /* LunasvrConfig */,
+			);
+			productName = DiathekeSDKExample;
+			productReference = 8FB4064E244D97E500AE4C73 /* DiathekeEmbeddedDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8FB40663244D97E700AE4C73 /* DiathekeEmbeddedDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FB40670244D97E700AE4C73 /* Build configuration list for PBXNativeTarget "DiathekeEmbeddedDemoTests" */;
+			buildPhases = (
+				8FB40660244D97E700AE4C73 /* Sources */,
+				8FB40661244D97E700AE4C73 /* Frameworks */,
+				8FB40662244D97E700AE4C73 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8FB40666244D97E700AE4C73 /* PBXTargetDependency */,
+			);
+			name = DiathekeEmbeddedDemoTests;
+			productName = DiathekeSDKExampleTests;
+			productReference = 8FB40664244D97E700AE4C73 /* DiathekeEmbeddedDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8FB40646244D97E500AE4C73 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1210;
+				ORGANIZATIONNAME = "Cobalt Speech and Language Inc";
+				TargetAttributes = {
+					8FB4064D244D97E500AE4C73 = {
+						CreatedOnToolsVersion = 11.4.1;
+						LastSwiftMigration = 1320;
+					};
+					8FB40663244D97E700AE4C73 = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 8FB4064D244D97E500AE4C73;
+					};
+				};
+			};
+			buildConfigurationList = 8FB40649244D97E500AE4C73 /* Build configuration list for PBXProject "DiathekeEmbeddedDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8FB40645244D97E500AE4C73;
+			packageReferences = (
+				8FA6752A2768CEB50093D59A /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				8FA6752D2768CEDE0093D59A /* XCRemoteSwiftPackageReference "Zip" */,
+				8F64E0B5276CF88B00D7ACF6 /* XCRemoteSwiftPackageReference "sdk-diatheke" */,
+				8FE7E5BA27A9484600C66735 /* XCRemoteSwiftPackageReference "ios-app-kit" */,
+			);
+			productRefGroup = 8FB4064F244D97E500AE4C73 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8FB4064D244D97E500AE4C73 /* DiathekeEmbeddedDemo */,
+				8FB40663244D97E700AE4C73 /* DiathekeEmbeddedDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8FB4064C244D97E500AE4C73 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FB4065E244D97E700AE4C73 /* LaunchScreen.storyboard in Resources */,
+				8FB4065B244D97E700AE4C73 /* Assets.xcassets in Resources */,
+				8FB40659244D97E500AE4C73 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FB40662244D97E700AE4C73 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8FB4064A244D97E500AE4C73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F95867527636BEC0099CAA3 /* ModelDownloader.swift in Sources */,
+				8F9586A9276384E80099CAA3 /* ModelsDownloadQueueManager.swift in Sources */,
+				8F79648E275F9BE100C31652 /* ConversationMessage.swift in Sources */,
+				8FB40656244D97E500AE4C73 /* ViewController.swift in Sources */,
+				8FB40652244D97E500AE4C73 /* AppDelegate.swift in Sources */,
+				8F349AF82456E12700AF1BCE /* AudioRecordingFileManager.swift in Sources */,
+				8F64E0B9276D06E500D7ACF6 /* UIApplicationExtension.swift in Sources */,
+				8F95867B27636CCE0099CAA3 /* FileManagerExtension.swift in Sources */,
+				8F9586A727637FFF0099CAA3 /* ServerProductType.swift in Sources */,
+				8F9586AB276393280099CAA3 /* ModelsViewController.swift in Sources */,
+				8F95867E27636CEC0099CAA3 /* Constants.swift in Sources */,
+				8F9586B0276393CC0099CAA3 /* CircularProgressBar.swift in Sources */,
+				8F5CF8D527623FF300481A79 /* ModelStatus.swift in Sources */,
+				8F2BEFAE2542D334000EBF11 /* Recorder.swift in Sources */,
+				8F958673276369DF0099CAA3 /* ModelStorage.swift in Sources */,
+				8F5CF8D327623FBD00481A79 /* LocalModel.swift in Sources */,
+				8FE7E60E27A9498100C66735 /* LunaWrapper.mm in Sources */,
+				8FB40654244D97E500AE4C73 /* SceneDelegate.swift in Sources */,
+				8F9586AE276393710099CAA3 /* ModelCells.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FB40660244D97E700AE4C73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FB40669244D97E700AE4C73 /* DiathekeEmbeddedDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8FB40666244D97E700AE4C73 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8FB4064D244D97E500AE4C73 /* DiathekeEmbeddedDemo */;
+			targetProxy = 8FB40665244D97E700AE4C73 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8FB40657244D97E500AE4C73 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8FB40658244D97E500AE4C73 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8FB4065C244D97E700AE4C73 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8FB4065D244D97E700AE4C73 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8FB4066B244D97E700AE4C73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8FB4066C244D97E700AE4C73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8FB4066E244D97E700AE4C73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = DiathekeEmbeddedDemo/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/GRPC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cobaltspeech.DiathekeEmbeddedDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "LunaAPI/DiathekeEmbeddedDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8FB4066F244D97E700AE4C73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = DiathekeEmbeddedDemo/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/GRPC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cobaltspeech.DiathekeEmbeddedDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "LunaAPI/DiathekeEmbeddedDemo-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8FB40671244D97E700AE4C73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2527Z97PF4;
+				INFOPLIST_FILE = DiathekeEmbeddedDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cobaltspeech.DiathekeEmbeddedDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DiathekeEmbeddedDemo.app/DiathekeEmbeddedDemo";
+			};
+			name = Debug;
+		};
+		8FB40672244D97E700AE4C73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2527Z97PF4;
+				INFOPLIST_FILE = DiathekeEmbeddedDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cobaltspeech.DiathekeEmbeddedDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DiathekeEmbeddedDemo.app/DiathekeEmbeddedDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8FB40649244D97E500AE4C73 /* Build configuration list for PBXProject "DiathekeEmbeddedDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FB4066B244D97E700AE4C73 /* Debug */,
+				8FB4066C244D97E700AE4C73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8FB4066D244D97E700AE4C73 /* Build configuration list for PBXNativeTarget "DiathekeEmbeddedDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FB4066E244D97E700AE4C73 /* Debug */,
+				8FB4066F244D97E700AE4C73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8FB40670244D97E700AE4C73 /* Build configuration list for PBXNativeTarget "DiathekeEmbeddedDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FB40671244D97E700AE4C73 /* Debug */,
+				8FB40672244D97E700AE4C73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8F64E0B5276CF88B00D7ACF6 /* XCRemoteSwiftPackageReference "sdk-diatheke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:cobaltspeech/sdk-diatheke.git";
+			requirement = {
+				kind = exactVersion;
+				version = 2.1.2;
+			};
+		};
+		8FA6752A2768CEB50093D59A /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = exactVersion;
+				version = 6.5.9;
+			};
+		};
+		8FA6752D2768CEDE0093D59A /* XCRemoteSwiftPackageReference "Zip" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:marmelroy/Zip.git";
+			requirement = {
+				kind = exactVersion;
+				version = 2.1.1;
+			};
+		};
+		8FE7E5BA27A9484600C66735 /* XCRemoteSwiftPackageReference "ios-app-kit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:cobaltspeech/ios-app-kit.git";
+			requirement = {
+				kind = exactVersion;
+				version = 0.9.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8F64E0B6276CF88B00D7ACF6 /* Diatheke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F64E0B5276CF88B00D7ACF6 /* XCRemoteSwiftPackageReference "sdk-diatheke" */;
+			productName = Diatheke;
+		};
+		8FA6752B2768CEB50093D59A /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8FA6752A2768CEB50093D59A /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+		8FA6752E2768CEDE0093D59A /* Zip */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8FA6752D2768CEDE0093D59A /* XCRemoteSwiftPackageReference "Zip" */;
+			productName = Zip;
+		};
+		8FE7E5BB27A9484600C66735 /* CubicsvrConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8FE7E5BA27A9484600C66735 /* XCRemoteSwiftPackageReference "ios-app-kit" */;
+			productName = CubicsvrConfig;
+		};
+		8FE7E5BD27A9484600C66735 /* DiathekesvrConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8FE7E5BA27A9484600C66735 /* XCRemoteSwiftPackageReference "ios-app-kit" */;
+			productName = DiathekesvrConfig;
+		};
+		8FE7E5BF27A9484600C66735 /* LunasvrConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8FE7E5BA27A9484600C66735 /* XCRemoteSwiftPackageReference "ios-app-kit" */;
+			productName = LunasvrConfig;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 8FB40646244D97E500AE4C73 /* Project object */;
+}

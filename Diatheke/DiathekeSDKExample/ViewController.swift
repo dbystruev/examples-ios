@@ -30,6 +30,7 @@ enum MessageType: String {
     case command = "CommandCell"
     case error = "ErrorCell"
     case commandResult = "CommandResultCell"
+    case transcribeResult = "TranscribeCell"
     
 }
 
@@ -60,7 +61,7 @@ class ViewController: UIViewController {
     
     // MARK: - Private properties
     
-    fileprivate var client: Client!                             // Diatheke Client
+    fileprivate var client: Cobaltspeech_Diatheke_DiathekeClient!                             // Diatheke Client
     fileprivate var host: String?                               // Connection host (100.78.103.101)
     fileprivate var port: Int?                                  // Connection port (9071)
     fileprivate var useTLS = false
@@ -75,6 +76,7 @@ class ViewController: UIViewController {
     fileprivate var audioData: Data?                            // TTS audio data
     fileprivate var asrStream: ASRStream?
     fileprivate var ttsStream: TTSStream?
+    fileprivate var transcribeStream: TranscribeStream?
     
     fileprivate var models: [Cobaltspeech_Diatheke_ModelInfo] = []
     
@@ -306,6 +308,22 @@ class ViewController: UIViewController {
                         print("TTS error received: \(error)")
                     } else if let audioData = self.audioData {
                         self.playAudio(data: audioData)
+                    }
+                })
+            case .transcribe(let transcribeAction):
+                self.transcribeStream = self.client.newTranscribeStream(action: transcribeAction, transcribeResultHandler: { transcribeResult in
+                    guard !transcribeResult.isPartial else {
+                        return
+                    }
+            
+                    let message = Message(text: transcribeResult.text, type: .transcribeResult)
+                    self.messages.append(message)
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                }, completion: { error in
+                    if let error = error {
+                        print("Transcribe error received: \(error)")
                     }
                 })
             }
