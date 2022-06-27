@@ -22,7 +22,7 @@ import AVFoundation
 import Cubic
 import GRPC
 
-protocol AudioRecorderDelegate: class {
+protocol AudioRecorderDelegate: AnyObject {
     
     func audioRecorderDidReceiveRecognitionResponse(_ response: Cobaltspeech_Cubic_RecognitionResponse)
     
