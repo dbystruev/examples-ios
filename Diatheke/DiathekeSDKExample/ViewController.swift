@@ -107,33 +107,36 @@ class ViewController: UIViewController {
 
     fileprivate var isRecording = false {
         didSet {
-            guard isViewLoaded else { return }
-            
-            if isRecording {
-                UIView.transition(with: recordButton,
-                                  duration: 0.2,
-                                  options: .transitionFlipFromBottom,
-                                  animations: { self.recordButton.setImage(UIImage(named: "stop_record"), for: .normal) },
-                                  completion: nil)
-            
+            DispatchQueue.main.async {
                 
-                textField.isHidden = true
-                recordDurationLabel.isHidden = false
+                guard self.isViewLoaded else { return }
                 
-                
-                recordDuration = 0
-                recordDurationTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (timer) in
-                    self.recordDuration += timer.timeInterval
-                })
-            } else {
-                UIView.transition(with: recordButton,
-                                  duration: 0.2,
-                                  options: .transitionFlipFromTop,
-                                  animations: { self.recordButton.setImage(UIImage(named: "start_record"), for: .normal) },
-                                  completion: nil)
-                textField.isHidden = false
-                recordDurationLabel.isHidden = true
-                recordDurationTimer.invalidate()
+                if self.isRecording {
+                    UIView.transition(with: self.recordButton,
+                                      duration: 0.2,
+                                      options: .transitionFlipFromBottom,
+                                      animations: { self.recordButton.setImage(UIImage(named: "stop_record"), for: .normal) },
+                                      completion: nil)
+                    
+                    
+                    self.textField.isHidden = true
+                    self.recordDurationLabel.isHidden = false
+                    
+                    
+                    self.recordDuration = 0
+                    self.recordDurationTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (timer) in
+                        self.recordDuration += timer.timeInterval
+                    })
+                } else {
+                    UIView.transition(with: self.recordButton,
+                                      duration: 0.2,
+                                      options: .transitionFlipFromTop,
+                                      animations: { self.recordButton.setImage(UIImage(named: "start_record"), for: .normal) },
+                                      completion: nil)
+                    self.textField.isHidden = false
+                    self.recordDurationLabel.isHidden = true
+                    self.recordDurationTimer.invalidate()
+                }
             }
         }
     }
