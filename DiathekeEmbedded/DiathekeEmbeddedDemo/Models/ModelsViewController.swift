@@ -21,9 +21,26 @@ class ModelsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBOutlet weak var tableView: UITableView!
     
-    public var productType: ServerProductType!
+    public var productType: ServerProductType! {
+        didSet {
+            switch productType {
+            case .cubic:
+                modelName = Constants.AGRISOMPO_ASR_MODEL_NAME
+                modelURL = Constants.AGRISOMPO_ASR_MODEL_URL
+            case .diatheke:
+                modelName = Constants.AGRISOMPO_DIATHEKE_MODEL_NAME
+                modelURL = Constants.AGRISOMPO_DIATHEKE_MODEL_URL
+            default:
+                modelName = nil
+                modelURL = nil
+            }
+        }
+    }
     
     private let downloadManager: ModelsDownloadQueueManager = ModelsDownloadQueueManager.shared
+    
+    private var modelName: String?
+    private var modelURL: String?
     
     var selectedModelIndex: Int?
     var delegate: ModelsViewControllerDelegate?
@@ -103,10 +120,16 @@ class ModelsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         alertController.addTextField { (textField) in
             textField.placeholder = "Model Name"
+            if let modelName = self.modelName {
+                textField.text = modelName
+            }
         }
         
         alertController.addTextField { (textField) in
             textField.placeholder = "Model Url"
+            if let modelURL = self.modelURL {
+                textField.text = modelURL
+            }
         }
         
         let connectAction = UIAlertAction(title: "Download", style: .default) { [weak alertController] (action) in

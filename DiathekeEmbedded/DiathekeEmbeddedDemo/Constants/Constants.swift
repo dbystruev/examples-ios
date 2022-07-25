@@ -21,4 +21,10 @@ class Constants {
     static let DIATHEKESVR_CONFIG_FILE_DEFAULT_NAME = "diathekesvr.cfg.toml"
     static let DIATHEKESVR_LICENSE_FILE_DEFAULT_NAME = "diathekesvr.license.key"
     
+    static let CUBIC_LICENCE_KEY = "https://d3vsdnqfisshkv.cloudfront.net/cubicsvr.license.key"
+    static let DIATHELE_LICENCE_KEY = "https://d3vsdnqfisshkv.cloudfront.net/diathekesvr.license.key"
+    static let AGRISOMPO_ASR_MODEL_NAME = "AgriSompo ASR"
+    static let AGRISOMPO_ASR_MODEL_URL = "https://cobalt-release.s3.amazonaws.com/perm/mobile/diatheke/agrisompo-asr.zip"
+    static let AGRISOMPO_DIATHEKE_MODEL_NAME = "AgriSompo Diatheke"
+    static let AGRISOMPO_DIATHEKE_MODEL_URL = "https://cobalt-release.s3.amazonaws.com/perm/mobile/diatheke/agrisompo.zip"
 }

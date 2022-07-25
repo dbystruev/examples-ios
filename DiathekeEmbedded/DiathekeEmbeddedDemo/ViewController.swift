@@ -572,10 +572,13 @@ class ViewController: UIViewController {
         }.resume()
     }
     
-    fileprivate func showLicenseDialog(product: ServerProductType) {
+    fileprivate func showLicenseDialog(product: ServerProductType, text: String?) {
         let ac = UIAlertController(title: "Download License", message: nil, preferredStyle: .alert)
         ac.addTextField { textField in
             textField.placeholder = "Paste license file URL here"
+            if let text = text {
+                textField.text = text
+            }
         }
         
         let downloadAction = UIAlertAction(title: "Download", style: .default) { action in
@@ -604,13 +607,13 @@ class ViewController: UIViewController {
         
         let diathekeAction = UIAlertAction(title: "Diatheke", style: .default) { action in
             DispatchQueue.main.async {
-                self.showLicenseDialog(product: .diatheke)
+                self.showLicenseDialog(product: .diatheke, text: Constants.DIATHELE_LICENCE_KEY)
             }
         }
         
         let cubicAction = UIAlertAction(title: "Cubic", style: .default) { action in
             DispatchQueue.main.async {
-                self.showLicenseDialog(product: .cubic)
+                self.showLicenseDialog(product: .cubic, text: Constants.CUBIC_LICENCE_KEY)
             }
         }
         
